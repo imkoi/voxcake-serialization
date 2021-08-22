@@ -1,9 +1,8 @@
-# VoxCake.IoC
-VoxCake.IoC - IoC without any dependencies on platform or engine.
-If you look for some IoC framework for unity you can look at [VoxCake.Framework](https://github.com/imkoi/voxcake-framework)
+# VoxCake.Serialization
+VoxCake.Serialization - framework for lightweight serialization.
 
 ## Getting Started
-1. Get latest [release](https://github.com/imkoi/voxcake-ioc/releases/tag/1.0) or built it yourself from source.
+1. Get latest [release](https://github.com/imkoi/voxcake-serialization/releases/tag/1.0) or built it yourself from source.
 2. Add reference to assembly in your project.
 3. Use it!
 
