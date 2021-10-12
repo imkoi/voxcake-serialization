@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{3E82412A-3125-4280-B194-CF815CDA7E15}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>VoxCake.Serialization</RootNamespace>
+        <AssemblyName>VoxCake.Serialization</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>false</DebugSymbols>
+        <DebugType>none</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>
+</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Source\Exceptions\SerializationException.cs" />
+        <Compile Include="Source\ISerializationController.cs" />
+        <Compile Include="Source\ISerializer.cs" />
+        <Compile Include="Source\SerializationController.cs" />
+        <Compile Include="Source\Serializer.cs" />
+        <Compile Include="Source\Serializes\Arrays\ByteArraySerializer.cs" />
+        <Compile Include="Source\Serializes\Arrays\IntArraySerializer.cs" />
+        <Compile Include="Source\Serializes\Values\ByteSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\CharSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\DoubleSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\FloatSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\IntSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\LongSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\ShortSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\StringSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\UIntSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\ULongSerializer.cs" />
+        <Compile Include="Source\Serializes\Values\UShortSerializer.cs" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
