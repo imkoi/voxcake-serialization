@@ -1,0 +1,6 @@
+C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\bin\Debug\VoxCake.Serialization.dll
+C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\bin\Debug\VoxCake.Serialization.pdb
+C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.csproj.AssemblyReference.cache
+C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.csproj.CoreCompileInputs.cache
+C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.dll
+C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.pdb
