@@ -9,3 +9,14 @@ C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization.Tests\o
 C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization.Tests\obj\Debug\VoxCake.Serialization.Tests.pdb
 C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization.Tests\bin\Debug\VoxCake.Serialization.dll
 C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization.Tests\bin\Debug\VoxCake.Serialization.pdb
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Debug\VoxCake.Serialization.Tests.dll
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Debug\VoxCake.Serialization.Tests.pdb
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Debug\nunit.framework.dll
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Debug\VoxCake.Serialization.dll
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Debug\VoxCake.Serialization.pdb
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Debug\nunit.framework.xml
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Debug\VoxCake.Serialization.Tests.csproj.AssemblyReference.cache
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Debug\VoxCake.Serialization.Tests.csproj.CoreCompileInputs.cache
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Debug\VoxCake.Serialization.Tests.csproj.CopyComplete
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Debug\VoxCake.Serialization.Tests.dll
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Debug\VoxCake.Serialization.Tests.pdb

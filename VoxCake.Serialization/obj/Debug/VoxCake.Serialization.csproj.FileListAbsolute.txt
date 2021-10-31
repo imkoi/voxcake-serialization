@@ -4,3 +4,9 @@ C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\obj\Deb
 C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.csproj.CoreCompileInputs.cache
 C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.dll
 C:\Users\sviri\RiderProjects\VoxCake.Serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.pdb
+C:\github\voxcake-serialization\VoxCake.Serialization\bin\Debug\VoxCake.Serialization.dll
+C:\github\voxcake-serialization\VoxCake.Serialization\bin\Debug\VoxCake.Serialization.pdb
+C:\github\voxcake-serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.csproj.AssemblyReference.cache
+C:\github\voxcake-serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.csproj.CoreCompileInputs.cache
+C:\github\voxcake-serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.dll
+C:\github\voxcake-serialization\VoxCake.Serialization\obj\Debug\VoxCake.Serialization.pdb
