@@ -44,6 +44,7 @@
     <ItemGroup>
         <Compile Include="ByteSerializerTests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="SerializationStreamTests.cs" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\VoxCake.Serialization\VoxCake.Serialization.csproj">

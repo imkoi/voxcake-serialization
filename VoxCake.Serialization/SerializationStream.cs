@@ -1,9 +1,9 @@
-﻿using System;
-
-namespace VoxCake.Serialization
+﻿namespace VoxCake.Serialization
 {
 	public struct SerializationStream
 	{
+		public bool IsEmpty => _readIndex == _count;
+		
 		private byte[] _buffer;
 		private int _capacity;
 		private int _count;
