@@ -33,6 +33,8 @@ public static class SerializationStreamCustomType
         };
     }
 }
+
+If your serialization uses bitwise and you would write raw bytes - you can use SerailizationStream.WriteBytes method.
 ```
 
 ## Getting Started
