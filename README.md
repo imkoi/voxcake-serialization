@@ -42,4 +42,4 @@ If your serialization uses bitwise and you would write raw bytes - you can use S
 3. Use it!
 
 ## Usage example
-You can see example of usage inside [voxcake-serialization/VoxCake.Serialization.Tests/Example/](https://github.com/imkoi/voxcake-serialization/blob/main/VoxCake.Serialization.Tests/Example/UsageExample.cs)
+You can see example of usage inside [VoxCake.Serialization.Tests/Example/](https://github.com/imkoi/voxcake-serialization/blob/main/VoxCake.Serialization.Tests/Example/UsageExample.cs)
