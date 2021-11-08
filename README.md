@@ -8,7 +8,7 @@ There is a list of types that supported for serialization by default:
 - Int16 / UInt16
 - Int32 / UInt32
 - Int64 / UInt64
-- Float / Double - * serialization of this variables cause a heap allocation, because it uses default microsoft BitConverter.*
+- Float / Double - *serialization of this variables cause a heap allocation, because it uses default microsoft BitConverter*
 - String
 
 ## Custom Types Serialization
