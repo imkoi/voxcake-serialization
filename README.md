@@ -33,9 +33,8 @@ public static class SerializationStreamCustomType
         };
     }
 }
-
-If your serialization uses bitwise and you would write raw bytes - you can use SerailizationStream.WriteBytes method.
 ```
+If your serialization uses bitwise and you would write raw bytes - you can use SerailizationStream.WriteBytes method.
 
 ## Getting Started
 1. Get latest [release](https://github.com/imkoi/voxcake-serialization/releases/tag/1.0) or built it yourself from source.
