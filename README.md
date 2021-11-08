@@ -1,6 +1,9 @@
 # VoxCake.Serialization
 VoxCake.Serialization - framework for lightweight binary serialization.
-This implementation trying to allocate low amount of garbage in heap - it should increase perfromance of your application.
+Implementation trying to allocate low amount of garbage in heap - it should increase perfromance of your application.
+
+## Custom Types Serialization
+It`s possible to add support of serialization / deserialization of your custom types by writing an extension for SerializationStream. Just look at example below.
 ```csharp
 public static class SerializationStreamCustomType
 {
