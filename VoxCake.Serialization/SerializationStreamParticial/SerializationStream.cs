@@ -89,5 +89,12 @@ namespace VoxCake.Serialization
 
 			return output;
 		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public void Clear()
+		{
+			_count = 0;
+			_readIndex = 0;
+		}
 	}
 }
