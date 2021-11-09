@@ -1,0 +1,11 @@
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Release\VoxCake.Serialization.Tests.dll
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Release\VoxCake.Serialization.Tests.pdb
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Release\nunit.framework.dll
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Release\VoxCake.Serialization.dll
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Release\VoxCake.Serialization.pdb
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\bin\Release\nunit.framework.xml
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Release\VoxCake.Serialization.Tests.csproj.AssemblyReference.cache
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Release\VoxCake.Serialization.Tests.csproj.CoreCompileInputs.cache
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Release\VoxCake.Serialization.Tests.csproj.CopyComplete
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Release\VoxCake.Serialization.Tests.dll
+C:\github\voxcake-serialization\VoxCake.Serialization.Tests\obj\Release\VoxCake.Serialization.Tests.pdb

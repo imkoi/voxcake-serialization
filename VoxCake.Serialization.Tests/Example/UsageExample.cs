@@ -62,13 +62,40 @@ namespace VoxCake.Serialization.Tests.Example
 
             return output;
         }
-
-        public struct Packet
+    }
+    
+    public static class SerializationStreamCustomType
+    {
+        public static void WriteMyType(this ref SerializationStream stream, CustomType customType)
         {
-            public int protocolHash;
-            public byte packetId;
-            public ulong senderId;
-            public long timestamp;
+            stream.WriteByte(customType.age);
+            stream.WriteInt16(customType.money);
+            stream.WriteInt64(customType.passion);
         }
+        
+        public static CustomType ReadMyType(this ref SerializationStream stream, CustomType customType)
+        {
+            return new CustomType
+            {
+                age = stream.ReadByte(),
+                money = stream.ReadInt16(),
+                passion = stream.ReadInt64()
+            };
+        }
+    }
+    
+    public struct Packet
+    {
+        public int protocolHash;
+        public byte packetId;
+        public ulong senderId;
+        public long timestamp;
+    }
+    
+    public struct CustomType
+    {
+        public byte age;
+        public short money;
+        public long passion;
     }
 }

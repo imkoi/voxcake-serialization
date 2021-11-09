@@ -16,9 +16,14 @@ namespace VoxCake.Serialization
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void WriteBytes(byte[] value)
         {
-            var length = value.Length;
-
-            if (length != 0)
+            var length = 0;
+            
+            if (value != null)
+            {
+                length = value.Length;
+            }
+            
+            if (length > 0)
             {
                 TryResize(length);
             
@@ -39,7 +44,7 @@ namespace VoxCake.Serialization
         {
             var array = new byte[length];
 
-            if (length != 0)
+            if (length > 0)
             {
                 Array.Copy(_buffer, _readIndex, array, 0, length);
 
@@ -47,6 +52,11 @@ namespace VoxCake.Serialization
             }
 
             return array;
+        }
+        
+        public void SkipBytes(int length)
+        {
+            _readIndex += length;
         }
     }
 }

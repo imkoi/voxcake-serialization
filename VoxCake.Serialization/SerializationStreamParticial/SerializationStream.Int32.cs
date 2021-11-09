@@ -8,11 +8,8 @@ namespace VoxCake.Serialization
         public void WriteInt32(int value)
         {
             TryResize(4);
-            
-            _buffer[_count++] = (byte)((value >> 24) & 255);
-            _buffer[_count++] = (byte)((value >> 16) & 255);
-            _buffer[_count++] = (byte)((value >> 8) & 255);
-            _buffer[_count++] = (byte)(value & 255);
+
+            UnsafeWriteInt32(value);
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -20,10 +17,7 @@ namespace VoxCake.Serialization
         {
             TryResize(4);
             
-            _buffer[_count++] = (byte)((value >> 24) & 255);
-            _buffer[_count++] = (byte)((value >> 16) & 255);
-            _buffer[_count++] = (byte)((value >> 8) & 255);
-            _buffer[_count++] = (byte)(value & 255);
+            UnsafeWriteUInt32(value);
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -36,6 +30,24 @@ namespace VoxCake.Serialization
         public uint ReadUInt32()
         {
             return (uint)((_buffer[_readIndex++] << 24) | (_buffer[_readIndex++] << 16) | (_buffer[_readIndex++] << 8) | _buffer[_readIndex++]);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal void UnsafeWriteInt32(int value)
+        {
+            _buffer[_count++] = (byte)((value >> 24) & 255);
+            _buffer[_count++] = (byte)((value >> 16) & 255);
+            _buffer[_count++] = (byte)((value >> 8) & 255);
+            _buffer[_count++] = (byte)(value & 255);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        internal void UnsafeWriteUInt32(uint value)
+        {
+            _buffer[_count++] = (byte)((value >> 24) & 255);
+            _buffer[_count++] = (byte)((value >> 16) & 255);
+            _buffer[_count++] = (byte)((value >> 8) & 255);
+            _buffer[_count++] = (byte)(value & 255);
         }
     }
 }

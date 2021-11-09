@@ -1,0 +1,6 @@
+C:\github\voxcake-serialization\VoxCake.Serialization\bin\Release\VoxCake.Serialization.dll
+C:\github\voxcake-serialization\VoxCake.Serialization\bin\Release\VoxCake.Serialization.pdb
+C:\github\voxcake-serialization\VoxCake.Serialization\obj\Release\VoxCake.Serialization.csproj.AssemblyReference.cache
+C:\github\voxcake-serialization\VoxCake.Serialization\obj\Release\VoxCake.Serialization.csproj.CoreCompileInputs.cache
+C:\github\voxcake-serialization\VoxCake.Serialization\obj\Release\VoxCake.Serialization.dll
+C:\github\voxcake-serialization\VoxCake.Serialization\obj\Release\VoxCake.Serialization.pdb

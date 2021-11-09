@@ -8,15 +8,27 @@ namespace VoxCake.Serialization
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void WriteString(string value)
         {
-            var stringLength = value.Length;
+            var stringLength = 0;
+
+            if (value != null)
+            {
+                stringLength = value.Length;
+            }
             
             TryResize(Encoding.UTF8.GetMaxByteCount(stringLength) + 4);
 
-            var bytesCount =  Encoding.UTF8.GetBytes(value, 0, stringLength,
-                _buffer, _count + 4);
-
-            WriteInt32(bytesCount);
-            _count += bytesCount;
+            if (stringLength > 0)
+            {
+                var bytesCount =  Encoding.UTF8.GetBytes(value, 0, stringLength,
+                    _buffer, _count + 4);
+                
+                UnsafeWriteInt32(bytesCount);
+                _count += bytesCount;
+            }
+            else
+            {
+                UnsafeWriteInt32(stringLength);
+            }
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -24,11 +36,16 @@ namespace VoxCake.Serialization
         {
             var stringLength = ReadInt32();
 
-            var stringValue = Encoding.UTF8.GetString(_buffer, _readIndex, stringLength);
+            if (stringLength > 0)
+            {
+                var stringValue = Encoding.UTF8.GetString(_buffer, _readIndex, stringLength);
+                
+                _readIndex += stringLength;
 
-            _readIndex += stringLength;
-
-            return stringValue;
+                return stringValue;
+            }
+            
+            return string.Empty;
         }
     }
 }
