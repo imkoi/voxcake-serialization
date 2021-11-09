@@ -5,32 +5,34 @@ namespace VoxCake.Serialization
 {
     public partial struct SerializationStream
     {
-        /// <summary>
-        /// Current implementation of WriteFloat method allocate 4 bytes in heap by using BitConverter.GetBytes
-        /// </summary>
-        /// <param name="value"></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void WriteFloat(float value)
         {
             TryResize(4);
-
-            var bytes = BitConverter.GetBytes(value);
             
-            Array.Copy(bytes, 0,
+            UnsafeWriteFloat(value);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void WriteDouble(double value)
+        {
+            TryResize(8);
+
+            UnsafeWriteDouble(value);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void UnsafeWriteFloat(float value)
+        {
+            Array.Copy(BitConverter.GetBytes(value), 0,
                 _buffer, _count, 4);
             
             _count += 4;
         }
         
-        /// <summary>
-        /// Current implementation of WriteDouble method allocate 8 bytes in heap by using BitConverter.GetBytes
-        /// </summary>
-        /// <param name="value"></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void WriteDouble(double value)
+        public void UnsafeWriteDouble(double value)
         {
-            TryResize(8);
-            
             Array.Copy(BitConverter.GetBytes(value), 0,
                 _buffer, _count, 8);
             
@@ -55,6 +57,18 @@ namespace VoxCake.Serialization
             _readIndex += 8;
             
             return output;
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void SkipFloat()
+        {
+            _readIndex += 4;
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void SkipDouble()
+        {
+            _readIndex += 8;
         }
     }
 }

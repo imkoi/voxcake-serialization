@@ -47,5 +47,13 @@ namespace VoxCake.Serialization
             
             return string.Empty;
         }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void SkipString()
+        {
+            var stringLength = ReadInt32();
+            
+            _readIndex += stringLength;
+        }
     }
 }

@@ -9,8 +9,8 @@ namespace VoxCake.Serialization
         public void WriteByte(byte value)
         {
             TryResize(1);
-            
-            _buffer[_count++] = value;
+
+            UnsafeWriteByte(value);
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -27,16 +27,34 @@ namespace VoxCake.Serialization
             {
                 TryResize(length);
             
-                Array.Copy(value, 0, _buffer, _count, length);
-            
-                _count += length;
+                UnsafeWriteBytes(value, length);
             }
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void UnsafeWriteByte(byte value)
+        {
+            _buffer[_count++] = value;
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void UnsafeWriteBytes(byte[] value, int length)
+        {
+            Array.Copy(value, 0, _buffer, _count, length);
+            
+            _count += length;
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public byte ReadByte()
         {
             return _buffer[_readIndex++];
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void SkipByte()
+        {
+            _readIndex++;
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

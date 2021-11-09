@@ -9,6 +9,20 @@ namespace VoxCake.Serialization
         {
             TryResize(8);
             
+            UnsafeWriteInt64(value);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void WriteUInt64(ulong value)
+        {
+            TryResize(8);
+            
+            UnsafeWriteUInt64(value);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void UnsafeWriteInt64(long value)
+        {
             _buffer[_count++] = (byte)((value >> 56) & 255);
             _buffer[_count++] = (byte)((value >> 48) & 255);
             _buffer[_count++] = (byte)((value >> 40) & 255);
@@ -20,10 +34,8 @@ namespace VoxCake.Serialization
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void WriteUInt64(ulong value)
+        public void UnsafeWriteUInt64(ulong value)
         {
-            TryResize(8);
-            
             _buffer[_count++] = (byte)((value >> 56) & 255);
             _buffer[_count++] = (byte)((value >> 48) & 255);
             _buffer[_count++] = (byte)((value >> 40) & 255);
@@ -48,6 +60,18 @@ namespace VoxCake.Serialization
             var num = _buffer[_readIndex++] << 24 | _buffer[_readIndex++] << 16 | _buffer[_readIndex++] << 8 | _buffer[_readIndex++];
             
             return (ulong)((uint) (_buffer[_readIndex++] << 24 | _buffer[_readIndex++] << 16 | _buffer[_readIndex++] << 8) | _buffer[_readIndex++] | (long) num << 32);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void SkipInt64()
+        {
+            _readIndex += 8;
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public void SkipUInt64()
+        {
+            _readIndex += 8;
         }
     }
 }
